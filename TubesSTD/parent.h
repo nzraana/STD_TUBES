@@ -38,7 +38,10 @@ struct ListParent{
 };
 
 void CreateListCourse(ListParent &C);
-adrCourse alokasiCourse();
+adrCourse alokasiCourse(infoCourse x);
+adrTask alokasiTask(infoTask x);
+void relationCourseandTask(ListParent &C,ListDosen &D,string matkul);
+void showDataTaskPerCourse(ListParent C,string matkul);
 adrCourse findCourse(ListParent C,string matkul);
 void insertLastCourse(ListParent &C,adrCourse p);
 void showCourse(ListParent C);
