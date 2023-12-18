@@ -1,17 +1,17 @@
 # depslib dependency file v1.0
-1702827194 source:d:\github\std_tubes_ran\tubesstd\main.cpp
+1702907096 source:d:\github\std_tubes_ran\tubesstd\main.cpp
 	"parent.h"
 
-1702827028 d:\github\std_tubes_ran\tubesstd\parent.h
+1702907060 d:\github\std_tubes_ran\tubesstd\parent.h
 	<iostream>
 	"dosen.h"
 
 1702826321 d:\github\std_tubes_ran\tubesstd\dosen.h
 	<iostream>
 
-1702827028 source:d:\github\std_tubes_ran\tubesstd\parent.cpp
+1702907060 source:d:\github\std_tubes_ran\tubesstd\parent.cpp
 	"parent.h"
 
-1702827172 source:d:\github\std_tubes_ran\tubesstd\dosen.cpp
+1702827251 source:d:\github\std_tubes_ran\tubesstd\dosen.cpp
 	"dosen.h"
 

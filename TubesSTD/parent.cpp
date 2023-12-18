@@ -3,20 +3,21 @@
 void CreateListCourse(ListParent &C){
     C.firstCourse = NULL;
 }
-adrCourse alokasiCourse(){
+
+adrCourse alokasiCourse(infoCourse x){
     adrCourse p;
     p = new elmCourse;
-    p->firstTask = NULL;
-    p->infotypeCourse = NULL;
     p->nextCourse = NULL;
+    p->infotypeCourse = x;
+    p->firstTask = NULL;
     return p;
 }
 
-adrTask alokasiTask(){
+adrTask alokasiTask(infoTask x){
     adrTask p;
     p = new elmTask;
     p->nextTask = NULL;
-    p->infotypeTask = NULL;
+    p->infotypeTask = x;
     p->dstDosen = NULL;
     return p;
 }
@@ -46,7 +47,74 @@ void insertLastCourse(ListParent &C,adrCourse p){
     }
 }
 
-void relasiParentAndChild(ListParent &C,)
+void insertFirstTask(ListParent &C,adrTask p){
+
+}
+
+void relationCourseandTask(ListParent &C,ListDosen &D,string matkul){
+    adrCourse s;
+    adrDosen d;
+    infoTask datatask;
+    adrTask p;
+    string namdos;
+
+    s = findCourse(C,matkul);
+    if(C.firstCourse == NULL){
+        cout << "Course Kosong";
+    }else{
+        if(s != NULL){
+            cout << "Anda akan masukan data task berupa:" << endl;
+            cout << "Judul task: ";
+            cin >> datatask.judul;
+            cout << "Deadline task: ";
+            cin >> datatask.deadline;
+            cout << "Masukan Nama Dosen: ";
+            cin >> namdos;
+
+            d = findDosen(D,namdos);
+            p = alokasiTask(datatask);
+
+            if(d != NULL){
+                p->dstDosen = d;
+            }else{
+                cout << "Dosen tidak ada" << endl;
+            }
+
+
+            if(s->firstTask == NULL){
+                s->firstTask = p;
+            }else{
+                p->nextTask = s->firstTask;
+                s->firstTask = p;
+            }
+        }else{
+            cout << "Data Course Tidak Ditemukan" << endl;
+        }
+    }
+}
+
+void showDataTaskPerCourse(ListParent C,string matkul){
+    adrCourse c;
+    adrTask t;
+    if(C.firstCourse == NULL){
+        cout << "Course Kosong";
+    }else{
+        c = findCourse(C,matkul);
+        cout << "Pada Mata Kuliah " << matkul << endl;
+        cout << "Diantaranya terdapat Task:" << endl;
+        t = c->firstTask;
+        while(t != NULL){
+            cout << "===================================" << endl;
+            cout << "Nama Task: " << t->infotypeTask.judul << endl;
+            cout << "Deadline Task: " << t->infotypeTask.deadline << endl;
+            cout << "Bersama Dosen: " << t->dstDosen->infotypeDosen.nama << endl;
+            cout << "===================================" << endl;
+            t = t->nextTask;
+        }
+    }
+    cout << endl;
+}
+
 void showCourse(ListParent C){
     adrCourse p;
     if(C.firstCourse == NULL){
