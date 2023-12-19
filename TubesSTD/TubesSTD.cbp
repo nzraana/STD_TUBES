@@ -32,7 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="dosen.cpp" />
+		<Unit filename="dosen.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="parent.cpp" />
+		<Unit filename="parent.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -41,6 +41,7 @@ void CreateListCourse(ListParent &C);
 adrCourse alokasiCourse(infoCourse x);
 adrTask alokasiTask(infoTask x);
 void relationCourseandTask(ListParent &C,ListDosen &D,string matkul);
+void deleteTaskbyCourse(ListParent &C,string matkul,string task);
 void showDataTaskPerCourse(ListParent C,string matkul);
 adrCourse findCourse(ListParent C,string matkul);
 void insertLastCourse(ListParent &C,adrCourse p);

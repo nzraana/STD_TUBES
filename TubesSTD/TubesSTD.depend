@@ -15,3 +15,19 @@
 1702827251 source:d:\github\std_tubes_ran\tubesstd\dosen.cpp
 	"dosen.h"
 
+1702991738 source:c:\users\asus\documents\github\std_tubes\tubesstd\dosen.cpp
+	"dosen.h"
+
+1702991738 c:\users\asus\documents\github\std_tubes\tubesstd\dosen.h
+	<iostream>
+
+1702994434 source:c:\users\asus\documents\github\std_tubes\tubesstd\main.cpp
+	"parent.h"
+
+1702994405 c:\users\asus\documents\github\std_tubes\tubesstd\parent.h
+	<iostream>
+	"dosen.h"
+
+1702994405 source:c:\users\asus\documents\github\std_tubes\tubesstd\parent.cpp
+	"parent.h"
+
