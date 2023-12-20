@@ -17,6 +17,7 @@ int main()
     cout << "4.Show Course" << endl;
     cout << "5.Relasikan Course Task Dosen" << endl;
     cout << "6.Show Data Task By Course" << endl;
+    cout << "7.Delete Task by Course" << endl;
     cout << "0.Exit" << endl;
     cout << "Masukan opsi anda" << endl;
     cout << "Opsi:";
@@ -44,6 +45,7 @@ int main()
             cout << "4.Show Course" << endl;
             cout << "5.Relasikan Course Task Dosen" << endl;
             cout << "6.Show Data Task By Course" << endl;
+            cout << "7.Delete Task by Course" << endl;
             cout << "0.Exit" << endl;
             cout << "Masukan opsi anda" << endl;
             cout << "Opsi:";
@@ -58,6 +60,7 @@ int main()
             cout << "4.Show Course" << endl;
             cout << "5.Relasikan Course Task Dosen" << endl;
             cout << "6.Show Data Task By Course" << endl;
+            cout << "7.Delete Task by Course" << endl;
             cout << "0.Exit" << endl;
             cout << "Masukan opsi anda" << endl;
             cout << "Opsi:";
@@ -83,6 +86,7 @@ int main()
             cout << "4.Show Course" << endl;
             cout << "5.Relasikan Course Task Dosen" << endl;
             cout << "6.Show Data Task By Course" << endl;
+            cout << "7.Delete Task by Course" << endl;
             cout << "0.Exit" << endl;
             cout << "Masukan opsi anda" << endl;
             cout << "Opsi:";
@@ -97,6 +101,7 @@ int main()
             cout << "4.Show Course" << endl;
             cout << "5.Relasikan Course Task Dosen" << endl;
             cout << "6.Show Data Task By Course" << endl;
+            cout << "7.Delete Task by Course" << endl;
             cout << "0.Exit" << endl;
             cout << "Masukan opsi anda" << endl;
             cout << "Opsi:";
@@ -113,11 +118,12 @@ int main()
             cout << "4.Show Course" << endl;
             cout << "5.Relasikan Course Task Dosen" << endl;
             cout << "6.Show Data Task By Course" << endl;
+            cout << "7.Delete Task by Course" << endl;
             cout << "0.Exit" << endl;
             cout << "Masukan opsi anda" << endl;
             cout << "Opsi:";
             cin >> opsi;
-        }else{
+        }else if(opsi == 6){
             string targetmatkul;
             cout << "Tampilan isi Task dan Dosen dari Course? ";
             cin >> targetmatkul;
@@ -129,6 +135,28 @@ int main()
             cout << "4.Show Course" << endl;
             cout << "5.Relasikan Course Task Dosen" << endl;
             cout << "6.Show Data Task By Course" << endl;
+            cout << "7.Delete Task by Course" << endl;
+            cout << "0.Exit" << endl;
+            cout << "Masukan opsi anda" << endl;
+            cout << "Opsi:";
+            cin >> opsi;
+        }else{
+            string matkul;
+            string task;
+            cout << "Hapus Task dari Course? ";
+            cin >> matkul;
+            showDataTaskPerCourse(P,matkul);
+            cout << "Hapus Task? ";
+            cin >> task;
+            deleteTaskbyCourse(P,matkul,task);
+            cout << "Terdapat opsi dibawah ini" << endl;
+            cout << "1.Input Dosen" << endl;
+            cout << "2.Show Dosen" << endl;
+            cout << "3.Input Course" << endl;
+            cout << "4.Show Course" << endl;
+            cout << "5.Relasikan Course Task Dosen" << endl;
+            cout << "6.Show Data Task By Course" << endl;
+            cout << "7.Delete Task by Course" << endl;
             cout << "0.Exit" << endl;
             cout << "Masukan opsi anda" << endl;
             cout << "Opsi:";

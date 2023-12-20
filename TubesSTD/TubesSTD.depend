@@ -6,12 +6,12 @@
 	<iostream>
 	"dosen.h"
 
-1702826321 d:\github\std_tubes_ran\tubesstd\dosen.h
+1703060224 d:\github\std_tubes_ran\tubesstd\dosen.h
 	<iostream>
 
 1702907060 source:d:\github\std_tubes_ran\tubesstd\parent.cpp
 	"parent.h"
 
-1702827251 source:d:\github\std_tubes_ran\tubesstd\dosen.cpp
+1703060224 source:d:\github\std_tubes_ran\tubesstd\dosen.cpp
 	"dosen.h"
 

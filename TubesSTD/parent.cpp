@@ -115,6 +115,39 @@ void showDataTaskPerCourse(ListParent C,string matkul){
     cout << endl;
 }
 
+
+void deleteTaskbyCourse(ListParent &C, string matkul, string task) {
+    adrCourse course;
+    if (C.firstCourse == NULL) {
+        cout << "Course Kosong";
+    } else {
+        course = findCourse(C, matkul);
+        if (course != NULL) {
+            adrTask p = course->firstTask;
+            adrTask prec = NULL;
+
+            while (p != NULL && p->infotypeTask.judul != task) {
+                prec = p;
+                p = p->nextTask;
+            }
+
+            if (p == NULL) {
+                cout << "Task tidak ditemukan" << endl;
+            } else {
+                if (prec == NULL) {
+                    course->firstTask = p->nextTask;
+                } else {
+                    prec->nextTask = p->nextTask;
+                }
+                delete p;
+                cout << "Task berhasil dihapus" << endl;
+            }
+        } else {
+            cout << "Course tidak ditemukan" << endl;
+        }
+    }
+}
+
 void showCourse(ListParent C){
     adrCourse p;
     if(C.firstCourse == NULL){
